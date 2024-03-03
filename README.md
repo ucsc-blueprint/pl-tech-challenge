@@ -1,8 +1,8 @@
-# Web Development Project 2 - *Name of App Here*
+# Web Development Project 2 - Unhinged Cat Facts
 
-Submitted by: **Your Name Here**
+Submitted by: Harshita Bhardwaj
 
-This web app: **insert description**
+This web app: Tests your knowlege and sees if you are a true cat lover.
 
 Time spent: **X** hours spent in total
 

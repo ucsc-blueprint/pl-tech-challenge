@@ -1,0 +1,47 @@
+.flip-card {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+    /* padding: 5vh; */
+    border-radius: 15px;
+
+    width: 40vw;
+    height: 37vh;
+
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/* Do a veritical flip when the card is clicked */
+.flip .flip-card {
+    transform: rotateX(180deg);
+}
+
+/* Style the back side */
+.card-back {
+    transform: rotateX(180deg) translateY(60px);
+}
+
+
+.card-front .card-back {
+    position: absolute;
+    border-radius: 15px;
+
+}
+
+.card-back {
+    display: flex;
+    align-items: center;
+}
+
+.card-img {
+    width: 20vw;
+    margin-right: 5vw;
+
+    border-radius: 15px 0 0 15px;
+}
+
+.card-text {
+    font-size: 24px;
+}
