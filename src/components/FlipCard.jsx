@@ -11,12 +11,14 @@ const FlipCard = (props) => {
 
     return (
         <div className={`flip-card ${isFront ? null : "flip"}`} onClick={handleCardClick}>
-            <div className={`card-front ${props.difficulty}`}>
-                <p className="ques card-text">{props.cardQues}</p>
-            </div>
-            <div className={`card-back ${props.difficulty}`}>
-                <img src={props.cardImg} alt="" className="card-img" />
-                <p className="ans card-text">{props.cardAns}</p>
+            <div className="card-inner">
+                <div className={`card-front ${props.difficulty}`}>
+                    <p className="ques card-text">{props.cardQues}</p>
+                </div>
+                <div className={`card-back ${props.difficulty}`}>
+                    <img src={props.cardImg} alt="" className="card-img" />
+                    <p className="ans card-text">{props.cardAns}</p>
+                </div>
             </div>
         </div>
     );
