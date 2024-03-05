@@ -1,8 +1,8 @@
-# Web Development Project 2 - Percy Jackson Flashcards
+# Web Development Project 2 - Cat Facts Flashcards
 
 Submitted by: Harshita Bhardwaj
 
-This web app: This web app tests the knowledge of a Percy Jackson fan. Test your triva from basic knowledge of what Percy's weapon of choice turns into to more niche knowledge to see if you really are a Percy Jackson fan.
+This web app tests how much of a cat lover one truly is. Only the best will be able to answer all the questions present. Worry not if you are not yet one. By the time you cycle through these phenomenal cat facts you are sure to fall in love with them too.
 
 Time spent: 6 hours spent in total
 
