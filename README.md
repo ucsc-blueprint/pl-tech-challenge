@@ -1,51 +1,48 @@
-# Web Development Project 2 - Unhinged Cat Facts
+# Web Development Project 2 - Percy Jackson Flashcards
 
 Submitted by: Harshita Bhardwaj
 
-This web app: Tests your knowlege and sees if you are a true cat lover.
+This web app: This web app tests the knowledge of a Percy Jackson fan. Test your triva from basic knowledge of what Percy's weapon of choice turns into to more niche knowledge to see if you really are a Percy Jackson fan.
 
-Time spent: **X** hours spent in total
+Time spent: 6 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [ ] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
-- [ ] **A single card at a time is displayed, only showing one of the components of the information pair**
-- [ ] **A list of card pairs is created**
-- [ ] **Clicking on the card shows the corresponding component of the information pair**
-- [ ] **Clicking the next button displays a random new card**
+- [✅] **The title of the card set and some information about it, such as a short description and the total number of cards are displayed**
+- [✅] **A single card at a time is displayed, only showing one of the components of the information pair**
+- [✅] **A list of card pairs is created**
+- [✅] **Clicking on the card shows the corresponding component of the information pair**
+- [✅] **Clicking the next button displays a random new card**
 
 The following **optional** features are implemented:
 
-- [ ] Cards contains images in addition to or in place of text
-- [ ] Cards have different visual styles such as color based on their category
-  - [ ] *visual style implemented*
+- [✅] Cards contains images in addition to or in place of text
+- [✅] Cards have different visual styles such as color based on their category
+  - Generic cards are colored green
+  - Niche cards are colored yellow
+  - Crazy Card facts are colored magenta
 
 The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
+- A random card is generated from the list of avaliable cards
+* One thing that I added to my flashcards web app was making it so if the user clicks on the back button then the next button they are taken back to the card they were viewing to make the flashcards more practical. Once the use makes it to the last new card they saw a new random card will be drawn
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXFyczIzaTliaGI5dHJzYXVwbndzN256YzJsOTZrdXQwbWJ2NjQxciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/weWWFkMNEwYlv9EtuT/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with ScreenToGif
 
 ## Notes
 
-Describe any challenges encountered while building the app.
-
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2024 Harshita Bhardwaj
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
