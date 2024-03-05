@@ -21,3 +21,27 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.header {
+  width: 60%;
+  text-align: center;
+  color:white;
+}
+
+.title {
+  font-size: 36px;
+  text-shadow: 4px 3px 0px rgba(0,0,0,0.2);
+}
+
+.subtitle {
+  font-size: 24px;
+  text-shadow: 2px 3px 0px rgba(0,0,0,0.2);
+}
+
+.control-btn {
+  margin-right: 2vw;
+}
+
+.next {
+  margin-right: 4vw;
+}
