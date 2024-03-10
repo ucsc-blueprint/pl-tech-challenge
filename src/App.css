@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-  background-image: url('https://wallpapercave.com/wp/wp7809165.png');
+  background-image: url('https://4kwallpapers.com/images/wallpapers/blue-sky-half-moon-crescent-moon-clouds-star-trails-5k-1920x1080-8404.png');
   background-repeat: no-repeat;
   background-size: cover;
   
@@ -22,6 +22,10 @@ body {
   align-items: center;
 }
 
+.row {
+  display: flex;
+}
+
 .header {
   width: 60%;
   text-align: center;
@@ -38,10 +42,21 @@ body {
   text-shadow: 2px 3px 0px rgba(0,0,0,0.2);
 }
 
-.control-btn {
-  margin-right: 2vw;
+.card-container {
+  width: 100%;
+  justify-content: space-between;
 }
 
-.next {
-  margin-right: 4vw;
+.icon {
+  width: 6vw;
+  height: 5vh;
+}
+
+.control-btn {
+  background-color: transparent;
+  border: none;
+  width: 30%;
+  &:hover {
+    background-color: rgba(214, 220, 223, 0.2);
+  }
 }

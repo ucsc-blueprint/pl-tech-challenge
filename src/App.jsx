@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import {FaArrowRight, FaArrowLeft} from 'react-icons/fa';
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { nextCard, prevCard, totalCards } from './js/cardGenerator';
 
 import './App.css';
@@ -32,26 +32,27 @@ function App() {
   return (
     <>
       <div className="header">
-        <h1 className='title'>Come one come all, and learn about our amazing feline friends</h1>
+        <h1 className='title'>Are you smarter than an elementary schooler?</h1>
         <h2 className='subtitle'>Total cards: {totalCards()}</h2>
       </div>
 
-      {card ? 
-        <FlipCard
-          cardQues = {card.ques}
-          cardAns = {card.ans}
-          cardImg = {card.img}
-          cat = {card.category}
-          handleCardClick = {handleCardClick}
-          isFront = {isFront} />: null}
-
-      <div className="control-btns" >
+      <div className="card-container row" >
         <button className="prev control-btn" onClick={handlePrev}>
-          <FaArrowLeft />
+          <FaChevronLeft className='icon' />
         </button>
 
+        {card ? 
+          <FlipCard
+            cardQues = {card.ques}
+            cardAns = {card.ans}
+            cardImg = {card.img}
+            cat = {card.category}
+            handleCardClick = {handleCardClick}
+          isFront = {isFront} />: null}
+
+
         <button className="next control-btn" onClick={handleNext}>
-          <FaArrowRight />
+          <FaChevronRight className='icon' />
         </button>
       </div>
     </>

@@ -1,112 +1,161 @@
 const cards = `[
     {
-        "ques": "How much of a house cat's genome is tiger",
-        "ans": "95.6%",
-        "img": "https://images.unsplash.com/photo-1496806195556-91bdded94209?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "g"
+      "ques": "What is the capital of France?",
+      "ans": "Paris",
+      "img": "https://images.unsplash.com/photo-1511739001486-6bfe10ce785f?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Geography"
     },
     {
-        "ques": "What behavior do cats share with tigers",
-        "ans": "scent marking by scratching, prey play, prey stalking, pouncing, chinning, and urine marking",
-        "img": "https://images.unsplash.com/photo-1680924726448-9f499055fb88?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "g"
+      "ques": "How many legs does a spider have?",
+      "ans": "Eight",
+      "img": "https://images.unsplash.com/photo-1544717455-4cf7ad978978?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
     },
     {
-        "ques": "What is true about cat's vision when compared to humans",
-        "ans": "Cats are nearsighted, but their peripheral vision and night vision are much better than that of humans",
-        "img": "https://images.unsplash.com/photo-1592194996308-7b43878e84a6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "n"
+      "ques": "What color is an apples most commonly?",
+      "ans": "Red (though there are other colors too)",
+      "img": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
     },
     {
-        "ques": "How many toes do cats have",
-        "ans": "Generally 18 toes",
-        "img": "https://images.unsplash.com/photo-1589883661923-6476cb0ae9f2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "g"
+      "ques": "Who wrote 'Romeo and Juliet'?",
+      "ans": "William Shakespeare",
+      "img": "https://www.thoughtco.com/thmb/-FrN7ySBVUV3pmuCvLBYX0brU5k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/silhouette-of-kissing-romeo-and-juliet-467128476-72aea82c364e4b458af4c2defc45c15a.jpg",
+      "category": "English"
     },
     {
-        "ques": "How high can cats jump",
-        "ans": "6 times their height",
-        "img": "https://images.unsplash.com/photo-1566513317351-c6d7be11505e?q=80&w=1894&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "g"
+      "ques": "What is the tallest mammal?",
+      "ans": "Giraffe",
+      "img": "https://images.unsplash.com/photo-1547721064-da6cfb341d50?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
     },
     {
-        "ques": "What's difference about cats' collarbones",
-        "ans": "They don't connect to other bones due to being burries in their shoulder muscles",
-        "img": "https://images.unsplash.com/photo-1573865526739-10659fec78a5?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "n"
+      "ques": "How many continents are there?",
+      "ans": "Seven",
+      "img": "https://images.unsplash.com/photo-1593632717071-218c1d85c663?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Geography"
     },
     {
-        "ques": "Why do cats stare at you with their mouth open",
-        "ans": "Cats have an extra organ that allows them to taste scents on the air",
-        "img": "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "g"
+      "ques": "What is 2 + 2?",
+      "ans": "Four",
+      "img": "https://images.unsplash.com/photo-1518133835878-5a93cc3f89e5?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Math"
     },
     {
-        "ques": "What do cats use their tails for",
-        "ans": "To balance themselves when they're jumping or walking along narrow ledges.",
-        "img": "https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "g"
+      "ques": "What is the name of our galaxy?",
+      "ans": "Milky Way",
+      "img": "https://images.unsplash.com/photo-1538370965046-79c0d6907d47?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
     },
     {
-        "ques": "Why should you never cut a cat's wiskers",
-        "ans": "Cats use their whiskers to determine which small spaces they can fit into.",
-        "img": "https://images.unsplash.com/photo-1533738363-b7f9aef128ce?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "n"
+      "ques": "Who painted the Mona Lisa?",
+      "ans": "Leonardo da Vinci",
+      "img": "https://images.unsplash.com/photo-1423742774270-6884aac775fa?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Art"
     },
     {
-        "ques": "Why do cats often not see what right under their nose",
-        "ans": "Cats vision doesn't include the area right under their nose",
-        "img": "https://images.unsplash.com/photo-1549545931-59bf067af9ab?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "c"
+      "ques": "What is the capital of the United States?",
+      "ans": "Washington, D.C.",
+      "img": "https://images.unsplash.com/photo-1552337125-0c43e12efec0?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Geography"
     },
     {
-        "ques": "T or F: A litter of kittens can have multiple fathers",
-        "ans": "True because female cats release multiple eggs when they are in heat",
-        "img": "https://images.unsplash.com/photo-1570824104453-508955ab713e?q=80&w=1911&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "c"
+      "ques": "What is the largest planet in our solar system?",
+      "ans": "Jupiter",
+      "img": "https://images.unsplash.com/photo-1630839437035-dac17da580d0?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
     },
     {
-        "ques": "What do cats do most of the time that they are awake",
-        "ans": "Cats spend 1/3 of their time awake cleaning themselves",
-        "img": "https://images.unsplash.com/photo-1526509177308-2073fcfbf0b0?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "n"
+      "ques": "What is the main ingredient in bread?",
+      "ans": "Flour",
+      "img": "https://images.unsplash.com/photo-1627485937980-221c88ac04f9?q=80&w=1783&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
     },
     {
-        "ques": "How fast are cats",
-        "ans": "Average house cats can run up to 30 miles per hour; faster than Usain Bolt at his fastest (27.8 mph)",
-        "img": "https://plus.unsplash.com/premium_photo-1677545182425-4fb12bdb9faf?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "c"
+      "ques": "What is the opposite of 'day'?",
+      "ans": "Night",
+      "img": "https://images.unsplash.com/photo-1505322022379-7c3353ee6291?q=80&w=1500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "English"
     },
     {
-        "ques": "Whats special about cat's noses",
-        "ans": "Cats' noese have patterns that are unique like human fingerprints",
-        "img": "https://images.unsplash.com/photo-1567270671170-fdc10a5bf831?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "n"
+      "ques": "What is the hardest natural substance on Earth?",
+      "ans": "Diamond",
+      "img": "https://images.unsplash.com/photo-1599707367072-cd6ada2bc375?q=80&w=1933&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
     },
     {
-        "ques": "What's special about cat's purr",
-        "ans": "They're believed to have healing properties. Their has a frequency between 25 and 250 Hz. This frequency is shown to promote healing in.",
-        "img": "https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "c"
+      "ques": "Who was the first President of the United States?",
+      "ans": "George Washington",
+      "img": "https://images.unsplash.com/photo-1585076800588-77e0884c3191?q=80&w=486&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "History"
     },
     {
-        "ques": "How high can cats fall and survive",
-        "ans": "Cats have been known to survive falls as high as 32 stories",
-        "img": "https://images.unsplash.com/photo-1610015476997-5c12bd2a3059?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "c"
+      "ques": "What is the process by which plants make their own food?",
+      "ans": "Photosynthesis",
+      "img": "https://images.unsplash.com/photo-1575703397367-725a44bcc790?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
     },
     {
-        "ques": "How many different sounds does the cat language include",
-        "ans": "100 different sounds",
-        "img": "https://images.unsplash.com/photo-1547955922-85912e223015?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "c"
+      "ques": "How many sides does a triangle have?",
+      "ans": "Three",
+      "img": "https://images.unsplash.com/photo-1575703397367-725a44bcc790?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Math"
     },
     {
-        "ques": "How many of cats in animal shelters are adopted",
-        "ans": "Only 27% 😢",
-        "img": "https://images.unsplash.com/photo-1535268647677-300dbf3d78d1?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-        "category": "c"
+      "ques": "What is the largest ocean on Earth?",
+      "ans": "Pacific Ocean",
+      "img": "https://images.unsplash.com/photo-1439405326854-014607f694d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Geography"
+    },
+    {
+      "ques": "What is the smallest planet in our solar system?",
+      "ans": "Mercury",
+      "img": "https://cdn.mos.cms.futurecdn.net/fjbeeRiPRQjQNhizwy7cWX-1200-80.jpg",
+      "category": "Science"
+    },
+    {
+      "ques": "What is the chemical symbol for water?",
+      "ans": "H2O",
+      "img": "https://plus.unsplash.com/premium_photo-1674831509457-b96ea66fe244?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
+    },
+    {
+      "ques": "Who is known as the father of modern physics?",
+      "ans": "Albert Einstein",
+      "img": "https://hips.hearstapps.com/hmg-prod/images/albert-einstein-sticks-out-his-tongue-when-asked-by-news-photo-1681316749.jpg",
+      "category": "Science"
+    },
+    {
+      "ques": "What is the capital of Japan?",
+      "ans": "Tokyo",
+      "img": "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?q=80&w=2036&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Geography"
+    },
+    {
+      "ques": "What is the primary function of the heart?",
+      "ans": "To pump blood throughout the body",
+      "img": "https://plus.unsplash.com/premium_photo-1677102356739-21994cd7787d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
+    },
+    {
+      "ques": "What is the name of the force that pulls objects toward the center of the Earth?",
+      "ans": "Gravity",
+      "img": "https://images.unsplash.com/photo-1522332896918-9622e84d53d7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
+    },
+    {
+      "ques": "What is the largest land mammal?",
+      "ans": "Elephant",
+      "img": "https://images.unsplash.com/photo-1603483080228-04f2313d9f10?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Science"
+    },
+    {
+      "ques": "What is the sum of all angles in a triangle?",
+      "ans": "180 degrees",
+      "img": "https://images.unsplash.com/photo-1416339158484-9637228cc908?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "category": "Math"
     }
-]`;
+  ]
+  `;
 
 export default cards;

@@ -7,11 +7,10 @@
 .flip-card {
     background-color: transparent;
     perspective: 1000px;
-    width: 45vw;
+    width: 40vw;
     height: 45vh;
     align-self: center;
     margin-bottom: 5em;
-    margin-right: 5em;
     border: none;
 }
 
@@ -74,14 +73,26 @@
 }
 
 /* card categories */
-.g {
+.Science {
     background-color: rgba(71, 134, 100, 0.85);
 }
 
-.n {
+.Geography {
     background-color: rgba(194, 186, 72, 0.85);
 }
 
-.c {
-    background-color: rgba(194, 72, 151, 0.85);
+.Math {
+    background-color: rgba(240, 70, 48, 0.85);
+}
+
+.History{
+    background-color: rgba(240, 128, 48, 0.85);
+}
+
+.English{
+    background-color: rgba(48, 192, 240, 0.85);
+}
+
+.Art{
+    background-color: rgba(240, 109, 240, 0.85);
 }
