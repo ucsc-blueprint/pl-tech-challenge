@@ -42,7 +42,7 @@ body {
   text-shadow: 2px 3px 0px rgba(0,0,0,0.2);
 }
 
-.card-container {
+.main-body {
   width: 100%;
   justify-content: space-between;
 }
@@ -59,4 +59,37 @@ body {
   &:hover {
     background-color: rgba(214, 220, 223, 0.2);
   }
+}
+
+.card-guess {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#guess-input {
+  width: 65%;
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+#guess-submit {
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(212, 120, 212);
+  color: black;
+  font-weight: 500;
+}
+
+.guess {
+  font-size: 1.25vw;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0.5vw;
+}
+
+.stats {
+  width: 100%;
+  justify-content: space-evenly;
 }
