@@ -11,7 +11,8 @@ function App() {
   const [cardGuess, setCardGuess] = useState(
   {
     ans: "", 
-    correct: 0,
+    currentStreak: 0,
+    longestStreak: 0,
     cardsRotated: 1,
   });
   
@@ -25,7 +26,6 @@ function App() {
   const handleNext = () => {
     setIsFront(true);
     setCard(nextCard())
-    setCardGuess({...cardGuess, correct: cardGuess.correct + 1});
     setCardGuess({...cardGuess, cardsRotated: cardGuess.cardsRotated + 1});
   };
   const handlePrev = () => {
@@ -40,14 +40,21 @@ function App() {
   // check if the ans inputted is corrent
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Guess: ${cardGuess.ans.toLowerCase()}\tAns: ${card.ans.toLowerCase()}`);
-    console.log(cardGuess.ans.toLowerCase() == card.ans.toLowerCase());
-    setCardGuess({...cardGuess, correct: cardGuess.correct + 1});
+    console.log(cardGuess.ans);
     if (cardGuess.ans.toLowerCase() == card.ans.toLowerCase()) {
-      console.log(`Num correct before: ${cardGuess.numCorrect}`);
+      console.log("correct");
       // notify that their guess was right
-      setCardGuess({...cardGuess, correct: cardGuess.correct + 1});
-      console.log(`Num correct after: ${cardGuess.numCorrect}\tshould be: ${cardGuess.numCorrect + 1}`);
+      setCardGuess({...cardGuess, currentStreak: cardGuess.currentStreak + 1});
+      // have a new longest streak
+      if (cardGuess.longestStreak < cardGuess.currentStreak) { 
+        setCardGuess({...cardGuess, longestStreak: cardGuess.currentStreak});
+      }
+    } else {
+      // have a new longest streak
+      if (cardGuess.longestStreak < cardGuess.currentStreak) { 
+        setCardGuess({...cardGuess, longestStreak: cardGuess.currentStreak});
+      }
+      setCardGuess({...cardGuess, currentStreak: 0});
     }
 
     setCardGuess({...cardGuess, ans: ""});
@@ -59,7 +66,10 @@ function App() {
         <h1 className='title'>Are you smarter than an elementary schooler?</h1>
         <div className="stats">
           <h2 className='subtitle'>Total cards: {totalCards()}</h2>
-          <h2 className="subtitle">Num Correct: {cardGuess.correct}/{cardGuess.cardsRotated}</h2>
+          <div className="row even">
+            <h2 className="subtitle">Current Streak: {cardGuess.currentStreak}</h2>
+            <h2 className="subtitle">Longest Streak: {cardGuess.longestStreak}</h2>
+          </div>
         </div>
       </div>
 
