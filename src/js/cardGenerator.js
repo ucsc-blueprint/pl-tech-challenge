@@ -5,6 +5,7 @@ const CARDS_JSON = JSON.parse(CARD_DATA);
 let indexesDrawn = [];
 let lastIndex;
 let currentIndex;
+let firstCardIndex;
 
 /* Gets a random card to display */
 function getRandomCard () {
@@ -18,6 +19,7 @@ function getRandomCard () {
     while (indexesDrawn.indexOf(randIndex) !== -1) randIndex = Math.floor(Math.random() * CARDS_JSON.length);
     
     indexesDrawn.push(randIndex);
+    console.log(indexesDrawn.length);
     currentIndex = randIndex;
     return CARDS_JSON[randIndex];
 }
@@ -29,7 +31,6 @@ export function prevCard() {
     // various consitions
     const isFirstCard = indexInDarwnArr === 0 && lastIndex === undefined;
     const allCardsHaveBeenDrawn = indexInDarwnArr === 0 && lastIndex !== undefined;
-
 
     // get the last card from the save var lastIndex because the indexes arr has just been reset
     if (isFirstCard) {

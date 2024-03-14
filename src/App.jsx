@@ -22,11 +22,13 @@ function App() {
   const [isFront, setIsFront] = useState(true);
   const handleNext = () => {
     setIsFront(true);
-    setCard(nextCard())
+    setGuessed(false);
+    setCard(nextCard());
   };
   const handlePrev = () => {
     setIsFront(true);
-    setCard(prevCard())
+    setGuessed(false);
+    setCard(prevCard());
   };
   // when the card is clicked change what side we see
   const handleCardClick = () => {
@@ -39,14 +41,15 @@ function App() {
     console.log(cardGuess, card.ans);
     if (cardGuess.toLowerCase() == card.ans.toLowerCase() && !guessed) {
       setCStreak(currentStreak + 1);
-      setGuessed(true); // ans was correct
     } else if (cardGuess.toLowerCase() == card.ans.toLowerCase() && guessed) { 
-      alert("You have already entered the correct answer for this card");
+      alert("You have already entered an answer for this card");
     } else {
       setCStreak(0);
     }
     
+    setGuessed(true); // ans was correct
     setCardGuess("");
+    setIsFront(false); // flip the card
   }
 
   // if the current streak is longer than the longest then update the streak

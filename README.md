@@ -1,4 +1,4 @@
-# Web Development Project 2 - General Facts Flashcards
+# Web Development Project 3 - General Facts Flashcards
 
 Submitted by: Harshita Bhardwaj
 
@@ -26,10 +26,13 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 - A random card is generated from the list of avaliable cards
-* One thing that I added to my flashcards web app was making it so if the user clicks on the back button then the next button they are taken back to the card they were viewing to make the flashcards more practical. Once the use makes it to the last new card they saw a new random card will be drawn
+- One thing that I added to my flashcards web app was making it so if the user clicks on the back button then the next button they are taken back to the card they were viewing to make the flashcards more practical. Once the use makes it to the last new card they saw a new random card will be drawn
+- If the user attemps to guess the answer more than once then their browser will alert them and let them know they have already entered an answer for this card
+  - Note: this alert does go away if the user clicks to another card then comes back to a card
+- Once the user enters an answer for a card the card will automatically flip and let them see the correct answer
 
 ## Issues I ran into
-- Making an object attribute increment. For some reason I was unable to make an object attribute increment, but if I attempted to increment a different atrribute it would do so without any issues.
+- Making an object attribute update. For some reason when updating a variable returned by useState that was an obj, the setter function would not update any attribute if it wasn't the first attribute. I tried getting help from multiple TFs regarding this issue but they weren't able to find what the issue could be either.
 
 ## Video Walkthrough
 
