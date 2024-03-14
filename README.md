@@ -38,7 +38,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXFyczIzaTliaGI5dHJzYXVwbndzN256YzJsOTZrdXQwbWJ2NjQxciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/weWWFkMNEwYlv9EtuT/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYjB2cjJxa2NiNXNhczFhdGMxNWJuZG5ocHlpaTdhcDc1YTRhdWl3OCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XQmTvG7u53qjMWlptf/giphy.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 <!-- Replace this with whatever GIF tool you used! -->
