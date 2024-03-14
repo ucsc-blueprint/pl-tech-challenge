@@ -11,20 +11,25 @@ Time spent: 6 hours spent in total
 The following **required** functionality is completed:
 
 - [✅] **The user can enter their guess in a box before seeing the flipside of the card**
-- [ ] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [✅] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+  - I do this by incrementing the current streak if they get the right answer, and the current streak is set to 0 if the wrong answer is given.
 - [✅] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
 - [✅] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
 
 The following **optional** features are implemented:
 
 - [ ] A shuffle button is used to randomize the order of the cards
+  - In my web app the cards are automatically shuffled on each reload
 - [ ] A user's answer may be counted as correct even when it is slightly different from the target answer
-- [ ] A counter displays the user's current and longest streak of correct responses
+- [✅] A counter displays the user's current and longest streak of correct responses
 - [ ] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 - A random card is generated from the list of avaliable cards
 * One thing that I added to my flashcards web app was making it so if the user clicks on the back button then the next button they are taken back to the card they were viewing to make the flashcards more practical. Once the use makes it to the last new card they saw a new random card will be drawn
+
+## Issues I ran into
+- Making an object attribute increment. For some reason I was unable to make an object attribute increment, but if I attempted to increment a different atrribute it would do so without any issues.
 
 ## Video Walkthrough
 

@@ -8,13 +8,10 @@ import FlipCard from './components/FlipCard';
 
 function App() {
   const [card, setCard] = useState(null);
-  const [cardGuess, setCardGuess] = useState(
-  {
-    ans: "", 
-    currentStreak: 0,
-    longestStreak: 0,
-    cardsRotated: 1,
-  });
+  const [cardGuess, setCardGuess] = useState("");
+  const [guessed, setGuessed] = useState(false);
+  const [currentStreak, setCStreak] = useState(0);
+  const [longestStreak, setLStreak] = useState(0);
   
   // load a random card intially
   useEffect(() => {
@@ -26,7 +23,6 @@ function App() {
   const handleNext = () => {
     setIsFront(true);
     setCard(nextCard())
-    setCardGuess({...cardGuess, cardsRotated: cardGuess.cardsRotated + 1});
   };
   const handlePrev = () => {
     setIsFront(true);
@@ -40,25 +36,24 @@ function App() {
   // check if the ans inputted is corrent
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(cardGuess.ans);
-    if (cardGuess.ans.toLowerCase() == card.ans.toLowerCase()) {
-      console.log("correct");
-      // notify that their guess was right
-      setCardGuess({...cardGuess, currentStreak: cardGuess.currentStreak + 1});
-      // have a new longest streak
-      if (cardGuess.longestStreak < cardGuess.currentStreak) { 
-        setCardGuess({...cardGuess, longestStreak: cardGuess.currentStreak});
-      }
+    console.log(cardGuess, card.ans);
+    if (cardGuess.toLowerCase() == card.ans.toLowerCase() && !guessed) {
+      setCStreak(currentStreak + 1);
+      setGuessed(true); // ans was correct
+    } else if (cardGuess.toLowerCase() == card.ans.toLowerCase() && guessed) { 
+      alert("You have already entered the correct answer for this card");
     } else {
-      // have a new longest streak
-      if (cardGuess.longestStreak < cardGuess.currentStreak) { 
-        setCardGuess({...cardGuess, longestStreak: cardGuess.currentStreak});
-      }
-      setCardGuess({...cardGuess, currentStreak: 0});
+      setCStreak(0);
     }
-
-    setCardGuess({...cardGuess, ans: ""});
+    
+    setCardGuess("");
   }
+
+  // if the current streak is longer than the longest then update the streak
+  useEffect(() => {
+    if (currentStreak > longestStreak) setLStreak(currentStreak);
+    console.log(guessed);
+  }, [currentStreak]);
 
   return (
     <>
@@ -67,8 +62,8 @@ function App() {
         <div className="stats">
           <h2 className='subtitle'>Total cards: {totalCards()}</h2>
           <div className="row even">
-            <h2 className="subtitle">Current Streak: {cardGuess.currentStreak}</h2>
-            <h2 className="subtitle">Longest Streak: {cardGuess.longestStreak}</h2>
+            <h2 className="subtitle">Current Streak: {currentStreak}</h2>
+            <h2 className="subtitle">Longest Streak: {longestStreak}</h2>
           </div>
         </div>
       </div>
@@ -93,8 +88,8 @@ function App() {
               type="text"
               id = "guess-input"
               className = "guess"
-              value={cardGuess.ans}
-              onChange={(e) => setCardGuess({...cardGuess, ans: e.target.value})} />
+              value={cardGuess}
+              onChange={(e) => setCardGuess(e.target.value)} />
             <input 
               type="submit" 
               value="Check Ans"
