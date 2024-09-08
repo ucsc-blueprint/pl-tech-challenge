@@ -1,62 +1,77 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import { nextCard, prevCard, totalCards } from './js/cardGenerator';
+import { totalCards } from './js/cardGenerator';
 
 import './App.css';
-
-import FlipCard from './components/FlipCard';
 
 function App() {
   const [card, setCard] = useState(null);
   const [cardGuess, setCardGuess] = useState("");
+  /**
+   * Boolean to check if the card has been guessed
+   */
   const [guessed, setGuessed] = useState(false);
+  /**
+   * Track the current and longest streak
+   */
   const [currentStreak, setCStreak] = useState(0);
   const [longestStreak, setLStreak] = useState(0);
   
-  // load a random card intially
-  useEffect(() => {
-    setCard(nextCard());
-  }, []);
-
+  /**
+   * Add implmentation a random card to display when the page loads below this comment
+   *
+   */
+  
+  /*---------------------------------------------------------------------------------*/
   
   const [isFront, setIsFront] = useState(true);
   const handleNext = () => {
     setIsFront(true);
     setGuessed(false);
-    setCard(nextCard());
+    /**
+     * Find the function to display the next card
+     * Hint: It has been implemented for you in another file
+     */
+    setCard({});
   };
+
   const handlePrev = () => {
     setIsFront(true);
     setGuessed(false);
-    setCard(prevCard());
+    /**
+     * Find the function to display the next card
+     * Hint: It has been implemented for you in another file
+     */
+    setCard({});
   };
-  // when the card is clicked change what side we see
+
+  /**
+   * Change what side of the card is displayed
+   */
   const handleCardClick = () => {
       setIsFront(!isFront);
   }
 
-  // check if the ans inputted is corrent
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(cardGuess, card.ans);
-    if (cardGuess.toLowerCase() == card.ans.toLowerCase() && !guessed) {
-      setCStreak(currentStreak + 1);
-    } else if (cardGuess.toLowerCase() == card.ans.toLowerCase() && guessed) { 
-      alert("You have already entered an answer for this card");
-    } else {
-      setCStreak(0);
-    }
-    
-    setGuessed(true); // ans was correct
-    setCardGuess("");
-    setIsFront(false); // flip the card
+  /**
+   * What happens when the user guesses an answer to the card
+   * @param {*} event
+   */
+  const handleSubmit = (event) => {
+    /**
+     * Please implement this function so that the user can guess the answer to the card
+     * Note the following:
+     * 1. If the user has already guessed the card, they should not be able to guess again
+     * 2. If the user guesses the answer correctly, the current streak should be incremented
+     * 3. If the user guesses the answer incorrectly, the current streak should be reset
+     */
   }
 
-  // if the current streak is longer than the longest then update the streak
-  useEffect(() => {
-    if (currentStreak > longestStreak) setLStreak(currentStreak);
-    console.log(guessed);
-  }, [currentStreak]);
+  /**
+   * Please add implementation for updating the longest steak when the current streak is greater
+   */
+
+  /*---------------------------------------------------------------------------------*/
+
 
   return (
     <>
@@ -77,14 +92,10 @@ function App() {
         </button>
 
         <div className="card-container">
-          {card ? 
-            <FlipCard
-              cardQues = {card.ques}
-              cardAns = {card.ans}
-              cardImg = {card.img}
-              cat = {card.category}
-              handleCardClick = {handleCardClick}
-            isFront = {isFront} />: null}
+          {/* 
+           * There should be a card displayed here.
+           * A basic card has been implemented for you in another file please use it appropriately here
+          */}
 
           <form className="card-guess" onSubmit={(e) => handleSubmit(e)}>
             <input 

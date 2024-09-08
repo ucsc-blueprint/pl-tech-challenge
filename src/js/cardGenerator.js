@@ -5,26 +5,26 @@ const CARDS_JSON = JSON.parse(CARD_DATA);
 let indexesDrawn = [];
 let lastIndex;
 let currentIndex;
-let firstCardIndex;
 
 /* Gets a random card to display */
+/**
+ * Choose a random card that hasn't been drawn yet
+ * @returns {object} - Card object
+ */
 function getRandomCard () {
-    let randIndex = Math.floor(Math.random() * CARDS_JSON.length);
-    // reset the cards if all of them have been drawn
-    if (indexesDrawn.length == CARDS_JSON.length) {
-        lastIndex = indexesDrawn[-1];
-        indexesDrawn = [];
-    }
-    //if a card has already been draw choose another random card
-    while (indexesDrawn.indexOf(randIndex) !== -1) randIndex = Math.floor(Math.random() * CARDS_JSON.length);
-    
-    indexesDrawn.push(randIndex);
-    console.log(indexesDrawn.length);
-    currentIndex = randIndex;
-    return CARDS_JSON[randIndex];
+    /**
+     * Please implement this function so a random card is returned every time
+     * not just the first card in the array.
+     */
+    return CARDS_JSON[0];
 }
 
-/* Gets the last card drawn */
+/**
+ * Returns the last card that was drawn allowing the user to go back to it
+ * If the user is at the first card and tries to go back, an alert will be shown
+ * This function has been implemented for you 😄
+ * @returns {object} - Card object
+ */
 export function prevCard() {
     const indexInDarwnArr = indexesDrawn.indexOf(currentIndex);
 
@@ -47,7 +47,11 @@ export function prevCard() {
 
 }
 
-/* Gets the next card */
+/**
+ * Gets the next card to display
+ * This function has been implemented for you 😄
+ * @returns {object} - Card object
+ */
 export function nextCard() { 
     const indexInDarwnArr = indexesDrawn.indexOf(currentIndex);
     
